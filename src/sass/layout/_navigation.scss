@@ -1,0 +1,106 @@
+header:after{
+  content: "";
+  display: block;
+  clear:both;
+}
+
+.logo{
+  float: left;
+  text-decoration: none;
+
+  @media screen and(max-width: 760px){
+    float: none;
+  }
+  img{
+    margin: 20px 0;
+  }
+  h1{
+    display: inline-block;
+    position: relative;
+    top: -29px;
+    color: $primaryColor;
+    font-size: 18px;
+  }
+}
+
+.main-nav{
+  float: right;
+  ul.open{
+    @media screen and(max-width: 760px){
+      height: auto;
+    }
+  }
+  @media screen and(max-width: 760px){
+    float: none;
+  }
+  ul{
+    overflow: hidden;
+
+    @media screen and(max-width: 760px){
+      height: 0;
+      overflow: hidden;
+    }
+    li{
+      float: left;
+      margin: 20px 0;
+      @media screen and(max-width: 760px){
+        float: none;
+      }
+      a{
+        text-decoration: none;
+        color: $primaryColor;
+        display: block;
+        height: 29px;
+        line-height: 29px;
+        padding: 0 15px;
+
+        @media screen and(max-width: 760px){
+          text-align: center;
+        }
+        &:hover{
+          color: $secondaryColor;
+        }
+
+      }
+    }
+  }
+}
+
+.nav-btn{
+  position: absolute;
+  height: 60px;
+  width: 70px;
+  padding: 20px;
+  top: 5px;
+  right: 20px;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  display: none;
+  @media screen and(max-width: 760px){
+    display: block;
+  }
+
+  span{
+    background-color: #000;
+    height: 3px;
+    display: block;
+
+    &:before, &:after{
+      position: absolute;
+      content: "";
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: #000;
+    }
+    &:before{
+      top: 20px;
+    }
+
+    &:after{
+      bottom: 20px;
+    }
+  }
+
+}
